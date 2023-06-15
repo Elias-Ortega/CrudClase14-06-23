@@ -1,6 +1,15 @@
-const fs = require('fs');
+//Construccion de un CRUD
+//La pila de Ejecución de JS, De NodeJS
 
-console.log('Nuestro primer programa fuera del navegador');
-const mensaje= 'Este mensaje aparecerá en el archivo si es que no necesitamos NPM';
+/* const funcionUno = ()=>{
+    console.log('Función uno');
+} */
+console.log('Inicio de programa');
 
-fs.writeFileSync('EstamosProbando.txt', mensaje);
+
+const mensaje = 'Ejecutando programa';
+
+console.log(mensaje);
+
+console.log('Término de programa');
+
