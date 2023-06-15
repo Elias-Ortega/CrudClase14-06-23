@@ -13,5 +13,8 @@
     "npm"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.4.0"
+  }
 }
