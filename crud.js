@@ -23,8 +23,17 @@ const createArr = (persona) => {
   fs.writeFileSync('EstamosProbando.txt', datos);
 }
 
-//Read
-
+//Read Generico standard (lectura del archivo)
+const readAll = () => {
+  let datos = fs.readFileSync('EstamosProbando.txt', 'utf-8');
+  datos.replace('\r', '');
+  datos = datos.split('\n');
+  return datos;
+}
+/* const readName = (nombre) => {  //el read puede tener variaciones, por ejemplo leer por nombre, o por Id,  o por comuna.
+} */
+console.log(readAll());
+//Update
 
 
 //Delete
