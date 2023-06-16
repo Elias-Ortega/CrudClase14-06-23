@@ -32,8 +32,19 @@ const readAll = () => {
 }
 /* const readName = (nombre) => {  //el read puede tener variaciones, por ejemplo leer por nombre, o por Id,  o por comuna.
 } */
-console.log(readAll());
+
 //Update
-
-
+const update = (nombreAntiguo, nombreNuevo) => {
+  let datos = fs.readFileSync('EstamosProbando.txt', 'utf-8');
+  datos.replace('\r', '');
+  datos = datos.split('\n');
+  //indexOf()
+  const indiceACambiar = datos.indexOf(nombreAntiguo);
+  console.log(indiceACambiar);
+  //splice(indiceDesde, cantidad)
+  datos.splice(indiceACambiar, 1, nombreNuevo)//el splice retorna el dato que se elimina o se cambia
+  datos = datos.join('\n');
+  fs.writeFileSync('EstamosProbando.txt', datos);
+}
+update('Francisco', 'Daniel');
 //Delete
